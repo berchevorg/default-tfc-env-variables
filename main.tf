@@ -2,7 +2,7 @@ variable "TFC_CONFIGURATION_VERSION_GIT_COMMIT_SHA" {}
 
 variable "length" {
   type = string
-  default = "3"
+  default = "4"
 }
  resource "random_pet" "name44" {
   length    = var.length
