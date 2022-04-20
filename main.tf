@@ -1,4 +1,6 @@
-variable "TFC_CONFIGURATION_VERSION_GIT_COMMIT_SHA" {}
+variable "TFC_CONFIGURATION_VERSION_GIT_COMMIT_SHA" {
+  default = "xxxxxxxxxxxxxxxxxxx"
+}
 
 variable "length" {
   type = string
