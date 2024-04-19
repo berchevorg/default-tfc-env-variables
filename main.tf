@@ -2,7 +2,7 @@ variable "TFC_CONFIGURATION_VERSION_GIT_BRANCH" {}
 
 variable "length" {
   type = string
-  default = "4"
+  default = "5"
 }
  resource "random_pet" "name44" {
   length    = var.length
