@@ -1,6 +1,4 @@
-variable "TFC_CONFIGURATION_VERSION_GIT_COMMIT_SHA" {
-  default = "xxxxxxxxxxxxxxxxxxx"
-}
+variable "TFC_CONFIGURATION_VERSION_GIT_BRANCH" {}
 
 variable "length" {
   type = string
@@ -13,7 +11,7 @@ variable "length" {
 
 resource "null_resource" "echo" {
   provisioner "local-exec" {
-    command = "echo $TFC_CONFIGURATION_VERSION_GIT_COMMIT_SHA"
+    command = "echo $TFC_CONFIGURATION_VERSION_GIT_BRANCH"
   }
   triggers = {
     run_every_time = uuid()
@@ -21,5 +19,5 @@ resource "null_resource" "echo" {
 }
 
 output "commit" {
-  value = var.TFC_CONFIGURATION_VERSION_GIT_COMMIT_SHA
+  value = var.TFC_CONFIGURATION_VERSION_GIT_BRANCH
 }
